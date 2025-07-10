@@ -127,7 +127,37 @@
         iframe.src = '';
         iframe.style.display = 'none';
       }
-    </script>
+    </script><script>
+  function showProfile() {
+    const iframe = document.getElementById('content-frame');
+    showIframe('https://ttin14.github.io/trungtin.github.io/');
+  }
+
+  function showDashboard() {
+    const iframe = document.getElementById('content-frame');
+    document.querySelector('.page-title').style.display = 'block';
+    document.querySelector('.card').style.display = 'block';
+    iframe.src = '';
+    iframe.style.display = 'none';
+  }
+
+  function showDrawingApp() {
+    showIframe('drawing-app/index.html'); // đường dẫn tới app vẽ
+  }
+
+  function showMemoryGame() {
+    showIframe('memory-game/index.html'); // đường dẫn tới game trí nhớ
+  }
+
+  function showIframe(src) {
+    const iframe = document.getElementById('content-frame');
+    document.querySelector('.page-title').style.display = 'none';
+    document.querySelector('.card').style.display = 'none';
+    iframe.src = src;
+    iframe.style.display = 'block';
+  }
+</script>
+
   </body>
 </html>
 <!-- Drawing App menu item -->
